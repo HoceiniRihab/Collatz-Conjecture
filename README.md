@@ -29,7 +29,7 @@ i will provide the Algorithm of each idea ... SOON
 
 ## Documentation
 
-- [Link to the PDF document](link_to_pdf_document.pdf)
+- [Link to the PDF document]([collatz C.pdf](https://github.com/HoceiniRihab/Collatz-Conjecture/blob/main/collatz%20C.pdf))
 
 ## Videos
 
