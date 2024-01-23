@@ -6,7 +6,7 @@
 
 ## Overview
 
-Briefly describe your project and its purpose. Mention the main features and functionalities.
+i will provide the Algorithm of each idea ... SOON
 
 ## Programs
 
