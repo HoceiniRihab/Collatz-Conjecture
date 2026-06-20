@@ -1,44 +1,35 @@
-# Collatz-Conjecture
+# The Wave-Like Collatz Sequence
 
-# Collatz Conjecture 
+Mini research project module, by **Rihab Hoceini**, under the supervision of **Prof. Hofmann**.
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+## Contribution
 
-## Overview
+This work introduces and studies a structured pattern of sub-series found inside the
+Collatz sequence, sitting in the middle of its apparent randomness — elements of the
+form `3(2n+1)` recur at predictable positions inside an `n × m` "odd matrix" built from
+the sequence's odd-step dynamics. We hope this structured sub-pattern can eventually
+contribute to a full formal proof of the Collatz conjecture for all numbers.
 
-i will provide the Algorithm of each idea ... SOON
+## Scaling
 
-## Programs
+The construction and extraction were scaled to large `n × n` matrices using GPU-parallel
+computing (CUDA via PyCUDA), benchmarked against the sequential CPU version. Our scaling
+limit was **n = 600**, beyond which the available GPU memory/runtime could no longer
+sustain the computation.
 
-### 1. Even Matrix Program
+If you have a good GPU lying around, give it a try for bigger `n` and let us know the
+maximum value you managed to reach — we promise to be only mildly jealous.
 
-### 2. Odd Matrix Program
+## Repository contents
 
-### 3. Optimization Tree
+- `sequential_wave.py` — CPU (sequential) construction of the odd matrix and extraction of the `3(2n+1)` sub-series.
+- `parallel_wave.py` — GPU (CUDA/PyCUDA) parallel construction and extraction, one thread per matrix cell.
+- `plot_scaling.py` — scalability comparison plot (sequential vs. parallel) with power-law fit and speedup curve.
+- `main.py` — entry point; run either mode with custom matrix dimensions `n` (rows) and `m` (columns).
 
-### 4. Interpolation of Max Function
+## Usage
 
-
-## Additional Ideas
-
-### 1. Fake Waves
-
-### 2. Steps Analysis
-
-
-
-## Documentation
-
-- [Link to the PDF document]([collatz C.pdf](https://github.com/HoceiniRihab/Collatz-Conjecture/blob/main/collatz%20C.pdf))
-
-## Videos
-
-Check out our YouTube playlist for animations and illustrative explanations:
-
-[Link to YouTube Playlist](link_to_youtube_playlist)
-
-## How to Contribute
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+```bash
+python main.py --mode sequential --n 11 --m 25
+python main.py --mode parallel --n 500 --m 500
+```
