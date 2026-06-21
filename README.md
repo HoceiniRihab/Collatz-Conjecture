@@ -1,6 +1,6 @@
 # The Wave-Like Collatz Sequence
 
-Mini research project module, by **Rihab Hoceini**, under the supervision of **Prof. Hofmann**.
+Mini research project, by **Rihab Hoceini**, under the supervision of **Prof. Hofmann**.
 
 ## Contribution
 
