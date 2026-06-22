@@ -22,14 +22,14 @@ maximum value you managed to reach — we promise to be only mildly jealous.
 
 ## Repository contents
 
-- `sequential_wave.py` — CPU (sequential) construction of the odd matrix and extraction of the `3(2n+1)` sub-series.
-- `parallel_wave.py` — GPU (CUDA/PyCUDA) parallel construction and extraction, one thread per matrix cell.
+- `sequential_wave.py` — sequential construction of the odd matrix and extraction of the `3(2n+1)` sub-series.
+- `parallel_wave.py` — parallel construction and extraction, one thread per matrix cell using PyCUDA.
 - `plot_scaling.py` — scalability comparison plot (sequential vs. parallel) with power-law fit and speedup curve.
 - `main.py` — entry point; run either mode with custom matrix dimensions `n` (rows) and `m` (columns).
 
 ## Usage
 
 ```bash
-python main.py --mode sequential --n 11 --m 25
+python main.py --mode sequential --n 11 --m 25 ==> will be modified to --n 500 --m 500 
 python main.py --mode parallel --n 500 --m 500
 ```
